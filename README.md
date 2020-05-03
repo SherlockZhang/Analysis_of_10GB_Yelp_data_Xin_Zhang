@@ -5,16 +5,15 @@ I analyzed a subset of Yelp's business, reviews and user data. This dataset come
 `s3://sta9760-spark-datasets2/*review.json`
 `s3://sta9760-spark-datasets2/*user.json`
 
-S3 pages are also here.
-https://github.com/SherlockZhang/Analysis_of_10GB_Yelp_data_Xin_Zhang/blob/master/Analysis.ipynb
+The analysis uses AWS EWR infrastructre to operate on the large data set. It first set an EWR cluster on AWS and corresponding spark application, and create a jupyper notebook with pyspark kernel on top it. Then I set up the S3 bucket to store the large data set. 
+
+After uploading up data, it uses pyspark to load the data into spark session from S3 bucket, and conducts transformation and action operation in pyspark to do each individual analysis. 
+
+## S3 pages are here.
 ![notebook](https://github.com/SherlockZhang/Analysis_of_10GB_Yelp_data_Xin_Zhang/blob/master/assets/EWR_S3.png?raw=true)
 
-
-
-
-
-Note that the output of the code written is provided as a means to give you structure as you write your analysis. For **Parts I, II & III**, you must fill in the blanks (however way you want) to get the output provided in the file. (Mainly columns and aggregations, I don't care about the exact rows). For **Parts III and IV**, you are more flexibility to take the analysis further however you see fit.
-
 ## Cluster and Notebook Configs
+![notebook](https://github.com/SherlockZhang/Analysis_of_10GB_Yelp_data_Xin_Zhang/blob/master/assets/EWR_Cluster.png?raw=true)
 
+![notebook](https://github.com/SherlockZhang/Analysis_of_10GB_Yelp_data_Xin_Zhang/blob/master/assets/EWR_notebook.png?raw=true)
 
